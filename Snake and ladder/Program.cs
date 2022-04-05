@@ -7,16 +7,16 @@ namespace Snake_and_ladder
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Snake and Ladder program");
-            //UC4
-            Console.WriteLine("Welcome to UC4 program");
-            int ladder = 1, ldice;
+            //UC5
+            Console.WriteLine("Welcome to UC5 program");
+            int ladder = 1, ldice = 0;
             int snake = 2, sdice;
             int win = 100;
-            int count = 0;
-            Console.WriteLine("Welcome to UC_4");
-            while (count <= win)
+            int count = 0, a = 0;
+  
+            while (count != win)
             {
-                if (count >= 0)
+                if (count >= 0 && count < 100)
                 {
                     Random random = new Random();
                     int randomCheck = random.Next(3);
@@ -25,10 +25,11 @@ namespace Snake_and_ladder
                     {
                         case 1:
                             {
+                                Console.WriteLine("Got Ladder");
                                 Random rnd = new Random();
                                 ldice = rnd.Next(1, 7);
                                 count = count + ldice;
-                                Console.WriteLine("Got Ladder");
+                                a = count;
                                 break;
                             }
                         case 2:
@@ -46,6 +47,10 @@ namespace Snake_and_ladder
                             }
                     }
                 }
+                else if (a > 100)
+                {
+                    count = a - ldice;
+                }
                 else
                 {
                     count = 0;
@@ -53,6 +58,7 @@ namespace Snake_and_ladder
 
             }
             Console.WriteLine("Player wins" + count);
+
         }
     }
 }
