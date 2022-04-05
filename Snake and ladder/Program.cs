@@ -7,12 +7,12 @@ namespace Snake_and_ladder
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Snake and Ladder program");
-            Console.WriteLine("Welcome to Snake and ladder program");
-            int player = 1;
-            int StartingPosition = 0;
-            Console.WriteLine("No of player=" + player);
-            Console.WriteLine("Position at start:" + StartingPosition);
-            Console.ReadLine();
+            //UC2
+            Console.WriteLine("Welcome to UC2 program");
+            Random random = new Random();
+            int num = random.Next(1, 7);
+            Console.WriteLine("The Random Dice Number is: " + num);
+
         }
     }
 }
